@@ -54,3 +54,10 @@ scrollToTopBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
+    const menuIcon = document.querySelector('.menu-icon');
+    navbar.classList.toggle('active');
+    menuIcon.classList.toggle('active');
+}
