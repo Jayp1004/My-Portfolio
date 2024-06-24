@@ -20,30 +20,6 @@ navbarLinks.forEach(link => {
     });
 });
 
-// Contact form submission handling
-// const contactForm = document.querySelector('.contact-form form');
-// contactForm.addEventListener('submit', function (e) {
-//     e.preventDefault();
-
-//     const formData = new FormData(contactForm);
-//     const data = Object.fromEntries(formData.entries());
-
-//     console.log('Form submitted:', data);
-
-//     // Display a success message
-//     const successMessage = document.createElement('p');
-//     successMessage.textContent = 'Thank you for your message!';
-//     successMessage.style.color = 'green';
-//     contactForm.appendChild(successMessage);
-
-//     // Clear the form
-//     contactForm.reset();
-
-//     // Remove the success message after 3 seconds
-//     setTimeout(() => {
-//         successMessage.remove();
-//     }, 3000);
-// });
 
 // Scroll to top button
 const scrollToTopBtn = document.createElement('button');
