@@ -322,6 +322,8 @@ span {
     z-index: 1000;
 }
 
+
+
 @media (max-width: 1024px) {
     .header {
         padding: 20px 5%;
@@ -413,29 +415,6 @@ span {
     }
 }
 
-/* Responsive Navbar */
-@media (max-width: 768px) {
-    .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-}
-
 /* Hamburger Menu */
 .menu-icon.active ~ .navbar {
     display: flex;
@@ -447,4 +426,100 @@ span {
 
 .menu-icon.active:before {
     content: '\2715'; /* Unicode for 'X' icon */
+}
+
+/*Services page*/
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 80px 5%;
+    background-color: #fff;
+}
+
+.service-item {
+    text-align: center;
+    max-width: 300px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-item i {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: orangered;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .menu-icon {
+        display: block; /* Show hamburger menu icon */
+    }
+
+    .navbar {
+        display: none; /* Hide navbar items by default */
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .navbar.active {
+        display: flex; /* Show navbar items when active */
+    }
+
+    .menu-icon:before {
+        content: '\2630'; /* Hamburger menu icon */
+    }
+
+    .menu-icon.active:before {
+        content: '\2715'; /* Close (X) icon when active */
+    }
+
+    .services {
+        padding: 40px 5%;
+    }
+
+    .service-item {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 5%;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
 }
