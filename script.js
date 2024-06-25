@@ -1,16 +1,5 @@
 // JavaScript for Jay's Portfolio
 
-// Smooth scroll for navbar links
-document.querySelectorAll('.navbar a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
 // Toggle active class for navbar links
 const navbarLinks = document.querySelectorAll('.navbar a');
 navbarLinks.forEach(link => {
@@ -19,6 +8,7 @@ navbarLinks.forEach(link => {
         link.classList.add('active');
     });
 });
+
 
 
 // Scroll to top button
